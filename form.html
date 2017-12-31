@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Записаться</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <h1 class="visually-hidden">Кутузова Анна - Имиджмейкер</h1>
+      <div class="page-header__logo  page-header__logo--inner-page">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logotype-desktop2.svg">
+          <source media="(min-width: 768px)" srcset="img/logotype-tablet2.svg">
+          <img src="img/logotype-mobile2.svg" width="370" height="153" alt="Барбершоп «Бородинский»">
+        </picture>
+      </div>
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__items">
+            <li class="main-nav__item"><a href="index.html">Главная</a></li>
+            <li class="main-nav__item"><a href="about.html">Обо мне</a></li>
+            <li class="main-nav__item main-nav__item--active"><a href="form.html">Записаться</a></li>
+            <li class="main-nav__item"><a href="services.html">Услуги</a></li>
+            <li class="main-nav__item"><a href="photo.html">Портфолио</a></li>
+            <li class="main-nav__item"><a href="blog.html">Блог</a></li>
+          </ul>
+          <ul class="main-nav__user-items">
+            <li class="main-nav__user-item"><a class="main-nav__user-login" href="#" title="Войти">Вход</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="form">
+      <div class="form__wrapper">
+        <h2 class="form__title">Записаться на консультацию</h2>
+        <a class="btn  form__return  form__return--show" href="index.html">На главную</a>
+        <form class="form__inner" action="mailto:l9909851@gmail.com" method="POST">
+          <div class="form__field  form__field--fullname">
+            <h3 class="form__field-title">Ваше ФИО:</h3>
+            <label for="surname"><span class="visually-hidden">Фамилия</span><input type="text" id="name" name="name" placeholder="Фамилия"></label>
+            <label for="name"><span class="visually-hidden">Имя</span><input type="text" id="surname" name="surname" placeholder="Имя"></label>
+            <label for="patronymic"><span class="visually-hidden">Отчество</span><input type="text" name="patronymic" placeholder="Отчество"></label>
+          </div>
+          <div class="form__field  form__field--contacts">
+            <h3 class="form__field-title">Ваши контакты:</h3>
+            <label for="phone"><input type="text" name="phone" placeholder="Контактный телефон"></label>
+            <label for="email"><input type="email" name="email" placeholder="Контактный e-mail"></label>
+          </div>
+          <div class="form__field  form__field--comment">
+            <h3 class="form__field-title">Оставьте комментарий для Анны:</h3>
+            <textarea name="comment" placeholder="Оставьте комментарий для Анны"></textarea>
+          </div>
+          </div>
+          <div class="form__field  form__field--offers">
+            <h3 class="form__field-title">Отметьте, что вас интересует:</h3>
+            <ul>
+              <li>
+                <input type="checkbox" id="offer-1" name="offer-1" checked>
+                <label for="offer-1">Ревизия гардероба</label>
+              </li>
+              <li>
+                <input type="checkbox" id="offer-2" name="offer-2">
+                <label for="offer-2">Подготовка к шоппингу</label>
+              </li>
+              <li>
+                <input type="checkbox" id="offer-3" name="offer-3">
+                <label for="offer-3">Шоппинг-сопровождение</label>
+              </li>
+              <li>
+                <input type="checkbox" id="offer-4" name="offer-4" checked>
+                <label for="offer-4">Закупка комплектов</label>
+              </li>
+              <li>
+                <input type="checkbox" id="offer-5" name="offer-5">
+                <label for="offer-5">Консультация по персональному имиджу</label>
+              </li>
+              <li>
+                <input type="checkbox" id="offer-6" name="offer-6">
+                <label for="offer-6">Другое</label>
+              </li>
+            </ul>
+          </div>
+          <button class="form__apply" type="button">Отправить заявку</button>
+        </form>
+      </section>
+      <footer class="page-footer">
+        <div class="page-footer__wrapper">
+          <p class="page-footer__contacts">
+            <b>Анна Кутузова</b><br>
+            Ваш персональный имиджмейкер<br>
+            <a class="btn" href="tel:+79168504810"><span class="page-footer__phone-show">Тел.:</span> +7 (916) 850-48-10</a>
+          </p>
+          <p class="page-footer__social">
+            <span class="page-footer__social-title">В соцсетях:</span>
+            <span class="social-links">
+              <a class="social-link  social-link--vk" href="https://vk.com/htmlacademy">Вконтакте</a>
+              <a class="social-link  social-link--fb" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
+              <a class="social-link  social-link--ig" href="https://instagram.com/htmlacademy">Инстаграм</a>
+            </span>
+          </p>
+         <p class="page-footer__copyright">
+          Хочешь такой же сайт?
+          <a class="btn" href="https://vk.com/noteasydrummer">ЗАКАЗАТЬ</a>
+        </p>
+        </div>
+      </footer>
+      <section class="modal-login">
+        <h2 class="modal-login__title">Личный кабинет</h2>
+        <p>Введите свой логин и пароль, чтобы войти</p>
+        <form class="modal-login__form" action="#" method="POST">
+          <label for="login">
+            <input type="text" id="login" placeholder="Логин">
+          </label>
+          <label for="password">
+            <input type="text" id="password" placeholder="Пароль">
+          </label>
+          <input type="checkbox" name="remember" id="remember">
+          <label for="remember"><span></span>Запомнить меня</label>
+          <a href="#">Я забыл пароль!</a>
+          <button class="modal-login__enter" type="submit">Войти</button>
+          <button class="modal-login__close  btn" type="button">Закрыть</button>
+        </form>
+      </div>
+    </section>
+    <section class="modal-failure">
+      <h2 class="modal-failure__title">Неудача</h2>
+      <p>Что-то пошло не так. Проверьте выделенные красным поля формы.</p>
+      <button class="modal-failure__close  btn">Ок</button>
+    </section>
+    <section class="modal-success">
+      <h2 class="modal-success__title">Спасибо!</h2>
+      <p>Ваша заявка отправлена.<br>Ожидайте, я свяжусь с вами в ближайшее время.</p>
+      <button class="modal-success__close  btn">Закрыть окно</button>
+    </section>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+      var link = document.querySelector('.main-nav__user-login');
+      var popup = document.querySelector('.modal-login');
+      var application = document.querySelector('.form__apply');
+      var modalSuccess = document.querySelector('.modal-success');
+      var modalFailure = document.querySelector('.modal-failure');
+      var modalLoginClose = document.querySelector('.modal-login__close');
+      var modalSuccessClose = document.querySelector('.modal-success__close');
+      var modalFailureClose = document.querySelector('.modal-failure__close');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        popup.classList.add('modal-login--show');
+      });
+
+      modalLoginClose.addEventListener('click', function(event) {
+        event.preventDefault();
+        popup.classList.remove('modal-login--show');
+       });
+
+      // application.addEventListener('click', function(event) {
+      //   event.preventDefault();
+      //   modalFailure.classList.add('modal-failure--show');
+      // });
+
+      // modalFailureClose.addEventListener('click', function(event) {
+      //   event.preventDefault();
+      //   modalFailure.classList.remove('modal-failure--show');
+      // });
+
+      application.addEventListener('click', function(event) {
+        event.preventDefault();
+        modalSuccess.classList.add('modal-success--show');
+      });
+
+      modalSuccessClose.addEventListener('click', function(event) {
+        event.preventDefault();
+        modalSuccess.classList.remove('modal-success--show');
+      });
+
+    </script>
+  </body>
