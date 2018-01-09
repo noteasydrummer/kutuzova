@@ -38,21 +38,21 @@
       <div class="form__wrapper">
         <h2 class="form__title">Записаться на консультацию</h2>
         <a class="btn  form__return  form__return--show" href="index.html">На главную</a>
-        <form class="form__inner" action="mailto:l9909851@gmail.com" method="POST">
+        <form class="form__inner" action="javascript:handleClick()">
           <div class="form__field  form__field--fullname">
             <h3 class="form__field-title">Ваше ФИО:</h3>
             <label for="surname"><span class="visually-hidden">Фамилия</span><input type="text" id="name" name="name" placeholder="Фамилия"></label>
             <label for="name"><span class="visually-hidden">Имя</span><input type="text" id="surname" name="surname" placeholder="Имя"></label>
-            <label for="patronymic"><span class="visually-hidden">Отчество</span><input type="text" name="patronymic" placeholder="Отчество"></label>
+            <label for="patronymic"><span class="visually-hidden">Отчество</span><input type="text"  id="patronymic" name="patronymic" placeholder="Отчество"></label>
           </div>
           <div class="form__field  form__field--contacts">
             <h3 class="form__field-title">Ваши контакты:</h3>
-            <label for="phone"><input type="text" name="phone" placeholder="Контактный телефон"></label>
-            <label for="email"><input type="email" name="email" placeholder="Контактный e-mail"></label>
+            <label for="phone"><input type="text" id="phone" name="phone" placeholder="Контактный телефон"></label>
+            <label for="email"><input type="email" id="email" name="email" placeholder="Контактный e-mail"></label>
           </div>
           <div class="form__field  form__field--comment">
             <h3 class="form__field-title">Оставьте комментарий для Анны:</h3>
-            <textarea name="comment" placeholder="Оставьте комментарий для Анны"></textarea>
+            <textarea name="comment" id="comment" placeholder="Оставьте комментарий для Анны"></textarea>
           </div>
           </div>
           <div class="form__field  form__field--offers">
@@ -84,7 +84,7 @@
               </li>
             </ul>
           </div>
-          <button class="form__apply" type="button">Отправить заявку</button>
+          <button class="form__apply" type="submit">Отправить заявку</button>
         </form>
       </section>
       <footer class="page-footer">
@@ -169,26 +169,40 @@
         event.preventDefault();
         popup.classList.remove('modal-login--show');
        });
-
-      // application.addEventListener('click', function(event) {
-      //   event.preventDefault();
-      //   modalFailure.classList.add('modal-failure--show');
-      // });
-
-      // modalFailureClose.addEventListener('click', function(event) {
-      //   event.preventDefault();
-      //   modalFailure.classList.remove('modal-failure--show');
-      // });
-
-      application.addEventListener('click', function(event) {
-        event.preventDefault();
+       
+function handleClick()
+{
+       /* Submit Button
+          failure */
+       var formfilled = (document.getElementById('name').value.length == 0) || (document.getElementById('surname').value.length == 0) || (document.getElementById('patronymic').value.length == 0) || (document.getElementById('phone').value.length == 0) || (document.getElementById('email').value.length == 0) || (document.getElementById('comment').value.length == 0);
+       
+       
+    if (Boolean(formfilled))
+    {
+        modalFailure.classList.add('modal-failure--show');
+        
+        modalFailureClose.addEventListener('click', function(event) {
+            event.preventDefault();
+            modalFailure.classList.remove('modal-failure--show');
+        });
+    } 
+    if (! Boolean(formfilled)) {
+    
+        /*  Email.send(document.getElementById('email').value,
+          "l9909851@gmail.com",
+          "New Inquery",
+          document.getElementById('comment'),
+          "smtp.yourisp.com",
+          "username",
+          "password");*/
         modalSuccess.classList.add('modal-success--show');
-      });
-
-      modalSuccessClose.addEventListener('click', function(event) {
-        event.preventDefault();
-        modalSuccess.classList.remove('modal-success--show');
-      });
+    
+        modalSuccessClose.addEventListener('click', function(event) {
+            event.preventDefault();
+            modalSuccess.classList.remove('modal-success--show');
+        });
+    }
+}
 
     </script>
   </body>
